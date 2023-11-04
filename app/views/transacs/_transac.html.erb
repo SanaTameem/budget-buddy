@@ -1,0 +1,10 @@
+<div id="<%= dom_id transac %>" class = "transac-item">
+  <div class = "transac-item-logo">
+    <img src="<%= (@category.icon) %>" alt="Transac Logo" class="transac-logo">
+  </div>
+  <div class = "transac-name-container">
+    <p class = "transac-name"><%= transac.name %></p>
+    <p class = "transac-date"><%= transac.created_at.strftime('%d-%B-%Y') %></p>
+  </div>
+  <p class = "transac-money">$<%= transac.amount %></p>
+</div>

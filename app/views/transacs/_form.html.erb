@@ -1,0 +1,32 @@
+<%= form_with(model: @transac, url: category_transacs_path(@category), class: 'new_transac') do |form| %>
+  <% if transac.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(transac.errors.count, "error") %> prohibited this transac from being saved:</h2>
+
+      <ul>
+        <% transac.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class ='field'>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class ='field'>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div class ='field'>
+    <%= form.collection_select :category_id, @categories, :id, :name, required: true %>
+  </div>
+
+  <div class ='actions'>
+    <%= form.submit 'Save' %>
+  </div>
+<% end %>
+<div>
+    <%= link_to "Back to transactions", category_transacs_path, class: 'transac-back-btn' %>
+</div>
