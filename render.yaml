@@ -1,7 +1,7 @@
 databases:
   - name: budget_buddy
-    databaseName: budget_buddy_ap30
-    user: budget_buddy_ap30_user
+    databaseName: budget_buddy_1z9c
+    user: budget_buddy_1z9c_user
 services:
   - type: web
     name: budget_buddy
