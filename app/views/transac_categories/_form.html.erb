@@ -1,0 +1,27 @@
+<%= form_with(model: transac_category) do |form| %>
+  <% if transac_category.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(transac_category.errors.count, "error") %> prohibited this transac_category from being saved:</h2>
+
+      <ul>
+        <% transac_category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :category_id, style: "display: block" %>
+    <%= form.text_field :category_id %>
+  </div>
+
+  <div>
+    <%= form.label :transac_id, style: "display: block" %>
+    <%= form.text_field :transac_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

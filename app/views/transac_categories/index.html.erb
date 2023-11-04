@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Transac categories</h1>
+
+<div id="transac_categories">
+  <% @transac_categories.each do |transac_category| %>
+    <%= render transac_category %>
+    <p>
+      <%= link_to "Show this transac category", transac_category %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New transac category", new_transac_category_path %>

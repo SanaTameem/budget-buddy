@@ -1,0 +1,36 @@
+<section class = "categories-page">
+  <p style="color: green"><%= notice %></p>
+  <nav class = "category-nav">
+    <div class = "nav-icons-container">
+      <%= image_tag('menu.png', class: 'menu-logo', alt: 'Menu Logo') %>
+      <h3>Categories</h3>
+      <%= image_tag('search.png', class: 'search-logo', alt: 'Search Logo') %>
+    </div>
+    <div class = "recent-container">
+      <p>Most recent</p>
+      <p>Most ancient</p>
+      <% if user_signed_in? %>
+        <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: 'log-out-btn' %>
+      <% end %>
+    </div>
+  </nav>
+  <div class = "gift-credit-container">
+    <p>Gift credit</p>
+    <p class = "money">$0.00</p>
+  </div>
+
+  <%if @categories.length == 0%>
+    <p class = "no-categories">No Categories Added yet</p>
+  <%else%>
+    <div id="categories">
+      <% @categories.each do |category| %>
+        <%= render category %>
+      <% end %>
+    </div>
+  <%end%>
+  <div class = "add-category-btn">
+    <% if user_signed_in? %>
+      <%= link_to "ADD CATEGORY", new_category_path %>
+    <% end %>
+  </div>
+</section>

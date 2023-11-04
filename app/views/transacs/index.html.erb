@@ -1,0 +1,39 @@
+<section class = "transac-index-page">
+  <p style="color: green"><%= notice %></p>
+  <nav class = "category-nav">
+    <div class = "nav-icons-container">
+      <%= image_tag('menu.png', class: 'menu-logo', alt: 'Menu Logo') %>
+      <h3>Transactions</h3>
+      <%= image_tag('search.png', class: 'search-logo', alt: 'Search Logo') %>
+    </div>
+    <div class = "transac-recent-container">
+      <p class = "total-transac">Total Amount : $<%= @total_amount %></p>
+      <div class = "log-out-container">
+        <p>Most recent</p>
+        <p>Most ancient</p>
+        <% if user_signed_in? %>
+          <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: 'log-out-btn' %>
+        <% end %>
+      </div>
+    </div>
+  </nav>
+  <div class = "gift-credit-container">
+    <p>Gift credit</p>
+    <p class = "money">$0.00</p>
+  </div>
+
+  <%if @transacs.length == 0%>
+    <p class = "no-categories">No Transactions Added yet</p>
+  <%else%>
+    <div id="transacs">
+      <% @transacs.each do |transac| %>
+        <%= render transac %>
+      <% end %>
+    </div>
+  <%end%>
+  <div class = "add-transac-btn">
+    <% if user_signed_in? %>
+      <%= link_to "Add Transaction", new_category_transac_path(@category) %>
+      <%= link_to "Back to Categories", categories_path, class: 'transac-back-btn' %>
+    <% end %>
+  </div>
