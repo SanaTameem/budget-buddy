@@ -67,7 +67,7 @@ Key features of the application
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link]()
-- [Video Presenation]()
+- [Video Presenation](https://www.loom.com/share/42b8a9cc37914b0cbaeb65e81b5311c5?sid=75dbaa1b-a078-49ef-ba5d-2587d81416e4)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,6 +167,6 @@ If you like this project, show your support by giving a star ⭐️, thanks in a
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT]() licensed.
+This project is [MIT](https://github.com/SanaTameem/budget-buddy/blob/feature/project-setup/MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
