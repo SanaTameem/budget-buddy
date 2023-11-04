@@ -1,15 +1,441 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@font-face {
+  font-family: "proxima Nova";
+  src: url('/assets/Proxima_Nova_Bold');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+body {
+  background-color: #ebf0f3;
+}
+
+.splash-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  gap: 80px;
+}
+
+.logo-container,
+.sign-log-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.log-in-btn {
+  text-decoration: none;
+  background-color: #3778c2;
+  padding: 10px;
+  width: 50%;
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px #434b54;
+  color: #fff;
+  font-size: 20px;
+}
+
+.sign-up-btn {
+  text-decoration: none;
+  background-color: rgb(25, 208, 39);
+  padding: 10px;
+  width: 50%;
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px #434b54;
+  font-size: 20px;
+  color: #fff;
+}
+
+.splash-title {
+  font-size: 40px;
+  color: #434b54;
+}
+
+.sign-up-page,
+.log-in-page,
+.forgot-pass-page,
+.change-pass-page,
+.new-category-page,
+.transac-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  gap: 60px;
+}
+
+.sign-up-page h2,
+.log-in-page h2,
+.new-category-page h2 {
+  font-size: 30px;
+}
+
+.new_user,
+.new_category,
+.new_transac {
+  display: flex;
+  width: 35%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.field,
+.actions {
+  width: 100%;
+}
+
+.field input,
+.actions input,
+.field select {
+  width: 100%;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.log-in-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35%;
+  align-items: center;
+  text-align: center;
+}
+
+.log-in-links a,
+.category-back-btn,
+.transac-back-btn {
+  text-decoration: none;
+  width: 100%;
+  color: #434b54;
+}
+
+.categories-page,
+.transac-index-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.category-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3778c2;
+  color: #fff;
+}
+
+.nav-icons-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.gift-credit-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  color: #434b54;
+  padding: 20px;
+  box-shadow: 2px 2px 8px #434b54;
+}
+
+.recent-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  gap: 19px;
+  padding: 10px;
+}
+
+.transac-recent-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 19px;
+  padding: 10px;
+}
+
+.total-transac {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+#categories,
+#transacs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 120px;
+}
+
+.category-item,
+.transac-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: #fff;
+  box-shadow: 2px 2px 8px #434b54;
+  padding: 6px 25px;
+}
+
+.category-item-logo,
+.transac-item-logo {
+  width: 20%;
+}
+
+.category-name-container,
+.transac-name-container {
+  width: 65%;
+  color: #434b54;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 18px;
+}
+
+.category-logo,
+.transac-logo {
+  width: 100%;
+  padding: 10px;
+}
+
+.money {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.transac-money,
+.category-money {
+  width: 20%;
+  font-weight: 900;
+  font-size: 20px;
+  color: #434b54;
+}
+
+.log-out-btn {
+  background: none;
+  border: none;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.category-name,
+.transac-name {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.add-category-btn {
+  width: 100%;
+  height: 100px;
+  background-color: #5fb523;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.add-transac-btn {
+  width: 100%;
+  height: 100px;
+  background-color: #5fb523;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  gap: 10px;
+}
+
+.add-category-btn a {
+  width: 50%;
+  border: 1px solid #fff;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+.add-transac-btn a {
+  width: 25%;
+  border: 1px solid #fff;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+.menu-logo {
+  width: 40px;
+}
+
+.search-logo {
+  width: 40px;
+}
+
+.no-categories {
+  margin-top: 20px;
+  font-size: 23px;
+  color: #434b54;
+}
+
+.category-transac-link {
+  text-decoration: none;
+  color: #434b54;
+  width: 100%;
+}
+
+.log-out-container {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  .log-in-btn,
+  .sign-up-btn {
+    width: 80%;
+  }
+
+  .main-container {
+    width: 100%;
+    gap: 160px;
+  }
+
+  .splash-logo {
+    width: 100%;
+  }
+
+  .new_user,
+  .new_category,
+  .new_transac {
+    width: 75%;
+  }
+
+  .log-in-links {
+    width: 75%;
+  }
+
+  .log-in-links a {
+    width: 100%;
+  }
+
+  .recent-container p {
+    font-size: 13px;
+  }
+
+  .log-out-btn {
+    font-size: 13px;
+  }
+
+  #categories,
+  #transacs {
+    width: 90%;
+  }
+
+  .category-name-container,
+  .transac-name-container {
+    padding-left: 0;
+    gap: 15px;
+  }
+
+  .category-item,
+  .transac-item {
+    padding: 5px;
+  }
+
+  .money {
+    font-size: 17px;
+    width: 16%;
+  }
+
+  .category-logo,
+  .transac-logo {
+    padding: 0;
+  }
+
+  .category-item-logo,
+  .transac-item-logo {
+    width: 24%;
+  }
+
+  .transac-recent-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .transac-money,
+  .category-money {
+    width: 37%;
+    font-size: 18px;
+  }
+
+  .log-out-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    gap: 19px;
+    padding: 10px;
+  }
+
+  .category-name,
+  .transac-name {
+    font-size: 17px;
+  }
+
+  .transac-date {
+    font-size: 14px;
+  }
+
+  .add-transac-btn a {
+    width: 40%;
+    font-size: 14px;
+  }
+}
