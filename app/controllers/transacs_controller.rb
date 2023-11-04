@@ -27,9 +27,9 @@ class TransacsController < ApplicationController
     @category = Category.find(params[:category_id])
     @transac = @category.transacs.build(transac_params)
     @transac.author_id = current_user.id
+    @categories = Category.where(author_id: current_user, id: params[:category_id])
     respond_to do |format|
       if @transac.save
-        @transac.categories.push(Category.find(params[:category_id]))
         format.html { redirect_to category_transacs_path(@category), notice: 'Transac was successfully created.' }
         format.json { render :show, status: :created, location: @transac }
       else
