@@ -66,7 +66,7 @@ Key features of the application
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://budget-buddy-brsq.onrender.com/)
 - [Video Presenation](https://www.loom.com/share/42b8a9cc37914b0cbaeb65e81b5311c5?sid=75dbaa1b-a078-49ef-ba5d-2587d81416e4)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
