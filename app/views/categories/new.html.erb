@@ -1,0 +1,11 @@
+<section class = "new-category-page">
+  <h2>New category</h2>
+
+  <%= render "form", category: @category %>
+
+  <br>
+
+  <div>
+    <%= link_to "Back to categories", categories_path, class: 'category-back-btn' %>
+  </div>
+</section>
