@@ -17,6 +17,4 @@ test:
 
 production:
   <<: *default
-  database: budget_buddy_production
-  username: budget_buddy
-  password: <%= ENV["BUDGET_BUDDY_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
