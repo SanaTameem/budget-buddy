@@ -1,0 +1,12 @@
+<section class = "splash-page">
+  <div class = "main-container">
+    <div class = "logo-container">
+      <%= image_tag('budget-logo.png', class: 'splash-logo', alt: 'Budget Logo') %>
+      <h1 class = "splash-title">Budget Buddy</h1>
+    </div>
+    <div class = sign-log-btn-container>
+      <%= link_to 'LOG IN', new_user_session_path, class: 'log-in-btn' %>    
+      <%= link_to 'SIGN UP', new_user_registration_path, class: 'sign-up-btn' %>    
+    </div>
+  </div>
+</section>
