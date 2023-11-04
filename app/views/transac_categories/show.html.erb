@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @transac_category %>
+
+<div>
+  <%= link_to "Edit this transac category", edit_transac_category_path(@transac_category) %> |
+  <%= link_to "Back to transac categories", transac_categories_path %>
+
+  <%= button_to "Destroy this transac category", @transac_category, method: :delete %>
+</div>
